@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.example.lab4_ui_components.ui.HomeFragment" />
+    <fragment android:id="@+id/scheduleFragment" android:name="com.example.lab4_ui_components.ui.ScheduleFragment" />
+    <fragment android:id="@+id/tasksFragment" android:name="com.example.lab4_ui_components.ui.TasksFragment" />
+    <fragment android:id="@+id/profileFragment" android:name="com.example.lab4_ui_components.ui.ProfileFragment" />
+    <fragment android:id="@+id/settingsFragment" android:name="com.example.lab4_ui_components.ui.SettingsFragment" />
+    <fragment android:id="@+id/newsFragment" android:name="com.example.lab4_ui_components.ui.NewsFragment" />
+    <fragment android:id="@+id/notificationsFragment" android:name="com.example.lab4_ui_components.ui.NotificationsFragment" />
+    <fragment android:id="@+id/syncFragment" android:name="com.example.lab4_ui_components.ui.SyncFragment" />
+
+    <fragment android:id="@+id/lessonDetailFragment" android:name="com.example.lab4_ui_components.ui.LessonDetailFragment">
+        <argument android:name="lessonId" app:argType="long" android:defaultValue="0L" />
+    </fragment>
+
+    <fragment android:id="@+id/taskEditFragment" android:name="com.example.lab4_ui_components.ui.TaskEditFragment">
+        <argument android:name="taskId" app:argType="long" android:defaultValue="0L" />
+        <argument android:name="prefillTitle" app:argType="string" app:nullable="true" android:defaultValue="@null" />
+        <argument android:name="prefillDesc" app:argType="string" app:nullable="true" android:defaultValue="@null" />
+        <argument android:name="prefillAt" app:argType="long" android:defaultValue="-1L" />
+    </fragment>
+</navigation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="hero_sub">#E9EAFF</color>
+    <color name="launcher_bg">#5B5FEF</color>
+    <color name="bg">#F6F7FB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface2">#F0F2F7</color>
+    <color name="text_primary">#171923</color>
+    <color name="muted">#777C8B</color>
+    <color name="primary">#5B5FEF</color>
+    <color name="primary2">#777AF7</color>
+    <color name="line">#E7E8EF</color>
+    <color name="green">#25A56A</color>
+    <color name="green_bg">#E9F8F1</color>
+    <color name="red">#E34D59</color>
+    <color name="red_bg">#FCEAEC</color>
+    <color name="blue_bg">#ECEEFF</color>
+    <color name="skeleton">#ECEEF3</color>
+    <color name="check_border">#C9CBD5</color>
+    <color name="notif_bg">#20222C</color>
+</resources>

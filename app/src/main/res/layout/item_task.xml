@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardStyle"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal" android:padding="12dp">
+        <FrameLayout android:id="@+id/checkArea" android:layout_width="44dp" android:layout_height="44dp"
+            android:clickable="true" android:focusable="true">
+            <FrameLayout android:id="@+id/check" android:layout_width="23dp" android:layout_height="23dp"
+                android:layout_gravity="center" android:background="@drawable/bg_check">
+                <ImageView android:id="@+id/checkIcon" android:layout_width="15dp" android:layout_height="15dp"
+                    android:layout_gravity="center" android:importantForAccessibility="no"
+                    android:src="@drawable/ic_check" android:tint="@color/white" android:visibility="gone" />
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="4dp" android:orientation="vertical">
+            <TextView android:id="@+id/tvTitle" style="@style/TextH3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvSub" style="@style/TextBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+        android:paddingHorizontal="16dp" android:paddingTop="18dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvSub" style="@style/TextBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Учебные дела" />
+            <TextView android:id="@+id/tvTitle" style="@style/TextH1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Мои задачи" />
+        </LinearLayout>
+        <ImageButton android:id="@+id/btnAdd" style="@style/IconButton" android:layout_width="40dp" android:layout_height="40dp" android:contentDescription="Добавить" android:src="@drawable/ic_add" />
+    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvTasks"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:clipToPadding="false" android:overScrollMode="never" android:paddingBottom="90dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/emptyState" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:gravity="center_horizontal" android:orientation="vertical"
+        android:paddingHorizontal="30dp" android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="@color/primary" android:textSize="48sp" />
+        <TextView style="@style/TextH2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Задач пока нет" />
+        <TextView style="@style/TextBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:gravity="center" android:text="Добавьте первую задачу, чтобы ничего не забыть." />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnEmptyAdd" style="@style/PrimaryButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Добавить задачу" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="18dp" android:contentDescription="Добавить задачу"
+        app:backgroundTint="@color/primary" app:srcCompat="@drawable/ic_add" app:tint="@color/white" />
+</FrameLayout>

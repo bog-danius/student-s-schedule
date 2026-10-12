@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:overScrollMode="never" android:paddingHorizontal="16dp" android:paddingTop="18dp" android:paddingBottom="24dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvDate" style="@style/TextBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            <TextView android:id="@+id/tvGreeting" style="@style/TextH1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="" />
+        </LinearLayout>
+        <ImageButton android:id="@+id/btnSettings" style="@style/IconButton" android:layout_width="40dp" android:layout_height="40dp" android:contentDescription="Настройки" android:src="@drawable/ic_settings" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_hero" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Сегодня" android:textColor="@color/hero_sub" android:textSize="14sp" />
+        <TextView android:id="@+id/tvHeroCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textColor="@color/white" android:textSize="25sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tvHeroSub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textColor="@color/hero_sub" android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView style="@style/TextH2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Расписание" />
+        <TextView android:id="@+id/tvSelectedLabel" style="@style/TextSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvDays" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:clipToPadding="false" android:orientation="horizontal" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <TextView android:id="@+id/tvListTitle" style="@style/TextH2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="12dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvLessons" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <TextView android:id="@+id/tvEmpty" style="@style/TextBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingVertical="40dp" android:text="В этот день занятий нет 🎉" android:visibility="gone" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -265,17 +265,6 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     }
 }
 
-class NewsFragment : Fragment(R.layout.fragment_news) {
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val b = FragmentNewsBinding.bind(view)
-        val repo = (requireActivity().application as App).repository
-        b.btnBack.setOnClickListener { findNavController().popBackStack() }
-        val adapter = NewsAdapter()
-        b.rvNews.adapter = adapter
-        repo.news.asLiveData().observe(viewLifecycleOwner) { adapter.submitList(it) }
-    }
-}
-
 class NotificationsFragment : Fragment(R.layout.fragment_notifications) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val b = FragmentNotificationsBinding.bind(view)
